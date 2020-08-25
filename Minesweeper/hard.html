@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard - Minesweeper</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <script src="hard.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="pageTitle">Hard</h1>
+    <div class="container">
+        <div class="grid"></div>
+        <div>Flags left: <span id="flagsLeft"></span></div> 
+        <div id="result"></div>
+        <div id="restartButton">Restart?</div>
+    </div>
+    <div class="footerContainer">
+        <button onclick="window.location.href='index.html';" class="return">
+            Home
+        </button>
+        <button id="infoBtn" class="button">
+            Instructions
+        </button>
+
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span> <!-- &times; creates x symbol -->
+                    <h2>Minesweeper Instructions</h2>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Left click to open a cell.  Right click to plant a flag on a cell you think contains a bomb.  If you have successfully flagged all 30 bombs you will win the game.
+                    </p>
+                    <p>    
+                        If you open a cell containing a bomb then it's game over.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <h3>Minesweeper v1.0</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,496 @@
+body {
+    overflow: hidden;
+    background: #E3CE76;
+    color: #71412C;
+    font-family: sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'MuseoModerno', cursive;
+    line-height: 1.6;
+}
+
+.container {
+    width: auto;
+    align-content: center;
+}
+
+.grid {
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #607c3c;
+    border: 5px dashed #abc32f;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+}
+
+div {
+    text-align: center;
+    font-family: 'MuseoModerno', cursive;
+}
+
+.valid {
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    border-color: #b5e550 #809c13 #809c13 #b5e550;
+    box-sizing: border-box;
+}
+  
+.checked {
+    height: 40px;
+    width: 40px;
+    border: 2.5px solid;
+    background-color: #cecab7;
+    border-color: #9c998d;
+    box-sizing: border-box;
+}
+  
+.bomb {
+    height: 40px;
+    width: 40px;
+    border: 5px solid;
+    border-color: #b5e550 #809c13 #809c13 #b5e550;
+    box-sizing: border-box;
+}
+  
+.one {
+    color: #ff0000;
+}
+  
+.two {
+    color: #ff7400;
+}
+  
+.three {
+    color:#e9d700;
+}
+  
+.four{
+    color: #005b96;
+}
+
+.five {
+      color: #800080;
+}
+  
+#result {
+    margin-top: 5px;
+    color: 	#ff0000;
+}
+
+.pageTitle {
+    font-family: 'MuseoModerno', cursive;
+    font-style: italic;
+    text-align: center;
+    font-size: 33.75px;
+}
+
+/* index page styles */
+
+.footer {
+    font-size: 15px;
+    height: 22px;
+    font-family: 'MuseoModerno', cursive;
+    width: 100%;
+    text-align: center;
+}
+
+.linksContainer {
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+}
+
+.breathingLink, .button, .return, #restartButton, #aboutReturn {
+    display: block;
+    border: #BD9334;
+    background-color: #71412C;
+    color: #E3CE76;
+    padding: 7px 14px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25px;
+}
+
+.breathingLink:hover, .return:hover, button:hover, #restartButton:hover, #aboutReturn:hover {
+    background-color: #ddd;
+    color: #BD9334;
+    border-radius: 25px;
+}
+
+.return, .button, #restartButton, #aboutReturn {
+    position: absolute;
+    width: 137.5px;
+}
+
+.return {
+    right: 55%;
+}
+
+.button {
+    left: 55%;
+}
+
+.return, .button {
+    top: 93%;
+}
+
+#restartButton {
+    left: 44%;
+}
+
+#aboutReturn {
+    right: 85%;
+    top: 30%;
+}
+
+/** modal styles */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;   /*order of elements, higher the z-index, more upfront it will be*/
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: #71412C;
+    margin: 10% auto;
+    width: 70%;
+    animation-name: modalopen;
+    animation-duration: 1s;
+    box-shadow: 0 2.5px 4px 0 rgba(0,0,0,0.2), 0 3.5px 10px 0 rgba(0,0,0,0.17);
+    color: #fff;
+}
+
+.modal-header h2, .modal-footer h3{
+    margin: 0;
+}
+
+.modal-header {
+    background: #DEBE5A;
+    padding: 7.5px;
+    color: #fff;
+    text-align: center;
+}
+
+.modal-body {
+    padding: 5px 10px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.modal-footer{
+    background: #DEBE5A;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.closeBtn {
+    float: right;
+    font-size: 15px;
+    color: #fff;
+}
+
+.closeBtn:hover, .closeBtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+/* about page styles */
+
+.headerContainer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.aboutContainer {
+    width: 100%;
+    margin: auto;
+    font-size: 30px;
+    text-align: justify;
+}
+
+.aboutDiv, .divH2 {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/** Tablets **/
+@media only screen and (min-width: 601px) and (max-width: 991px) {    
+    .grid {
+        height: 500px;
+        width: 500px;
+        /*margin-left: 50px;*/
+        /*margin-top: 20px;*/
+        border: 6.25px dashed #abc32f;
+    }
+    
+    .valid {
+        height: 50px;
+        width: 50px;
+        border: 6.25px solid;
+        border-color: #b5e550 #809c13 #809c13 #b5e550;
+        box-sizing: border-box;
+    }
+      
+    .checked {
+        height: 50px;
+        width: 50px;
+        border: 3.25px solid;
+        background-color: #cecab7;
+        border-color: #9c998d;
+        box-sizing: border-box;
+    }
+      
+    .bomb {
+        height: 50px;
+        width: 50px;
+        border: 6.25px solid;
+        border-color: #b5e550 #809c13 #809c13 #b5e550;
+        box-sizing: border-box;
+    }
+
+    #result {
+        margin-top: 5px;
+        color: 	#ff0000;
+    }
+    
+    .pageTitle {
+        font-size: 42.1875px;
+    }
+    
+    /* index page styles */
+    
+    .footer {
+        font-size: 18.75px;
+        height: 27.5px;
+    }
+    
+    .linksContainer {
+        height: 375px;
+        width: 375px;
+    }
+    
+    .breathingLink, .button, .return, #restartButton, #aboutReturn {
+        padding: 9.25px 17.5px;
+        font-size: 25px;
+        border-radius: 31.25px;
+    }
+    
+    .breathingLink:hover, .return:hover, button:hover, #restartButton:hover, #aboutReturn:hover {
+        border-radius: 31.25px;
+    }
+    
+    .return, .button, #restartButton, #aboutReturn {
+        width: 171.875px;
+    }
+    
+    .return {
+        right: 55%;
+    }
+    
+    .button {
+        left: 55%;
+    }
+    
+    .return, .button {
+        top: 81.375%;
+    }
+    
+    #restartButton {
+        left: 37%;
+    }
+    
+    #aboutReturn {
+        right: 80%;
+    }
+    
+    /** modal styles */   
+    .modal-content {
+        margin: 12.5% auto;
+        width: 87.5%;
+        box-shadow: 0 3.25px 5px 0 rgba(0,0,0,0.2), 0 4.375px 12.5px 0 rgba(0,0,0,0.17);
+    }
+    
+    .modal-header {
+        padding: 9.375px;
+    }
+    
+    .modal-body {
+        padding: 6.25px 12.5px;
+        text-align: justify;
+        font-size: 18.75px;
+    }
+    
+    .modal-footer{
+        padding: 6.25px;
+    }
+    
+    .closeBtn {
+        font-size: 18.75px;
+    }
+    
+    /* about page styles */
+    
+    .aboutContainer {
+        font-size: 37.5px;
+    }
+    
+    .aboutDiv, .divH2 {
+        margin-left: 6.25%;
+        margin-right: 6.25%;
+    }
+}
+
+/** Mobile phones **/
+@media only screen and (max-width: 600px) {   
+    .grid {
+        height: 300px;
+        width: 300px;
+        /*margin-left: 50px;*/
+        /*margin-top: 20px;*/
+        border: 3.75px dashed #abc32f;
+    }
+    
+    .valid {
+        height: 30px;
+        width: 30px;
+        border: 3.75px solid;
+        border-color: #b5e550 #809c13 #809c13 #b5e550;
+        box-sizing: border-box;
+    }
+      
+    .checked {
+        height: 30px;
+        width: 30px;
+        border: 1.75px solid;
+        background-color: #cecab7;
+        border-color: #9c998d;
+        box-sizing: border-box;
+    }
+      
+    .bomb {
+        height: 30px;
+        width: 30px;
+        border: 3.75px solid;
+        border-color: #b5e550 #809c13 #809c13 #b5e550;
+        box-sizing: border-box;
+    }
+
+    #result {
+        margin-top: 2.5px;
+        color: 	#ff0000;
+    }
+    
+    .pageTitle {
+        font-size: 21px;
+    }
+    
+    /* index page styles */
+    
+    .footer {
+        font-size: 9px;
+        height: 14px;
+    }
+    
+    .linksContainer {
+        height: 187.5px;
+        width: 187.5px;
+    }
+    
+    .breathingLink, .button, .return, #restartButton, #aboutReturn {
+        padding: 10px 15px;
+        font-size: 17.5px;
+        border-radius: 16px;
+    }
+    
+    .breathingLink:hover, .return:hover, button:hover, #restartButton:hover, #aboutReturn:hover {
+        border-radius: 16px;
+    }
+    
+    .return, .button, #restartButton, #aboutReturn {
+        width: 120px;
+    }
+    
+    .return {
+        right: 55%;
+    }
+    
+    .button {
+        left: 55%;
+    }
+    
+    .return, .button {
+        top: 81.375%;
+    }
+    
+    #restartButton {
+        left: 29%;
+    }
+    
+    #aboutReturn {
+        right: 80%;
+    }
+    
+    /** modal styles */   
+    .modal-content {
+        margin: 12.5% auto;
+        width: 87.5%;
+        box-shadow: 0 1.625px 2.5px 0 rgba(0,0,0,0.2), 0 2.1875px 6.25px 0 rgba(0,0,0,0.17);
+    }
+    
+    .modal-header {
+        padding: 4.6875px;
+    }
+    
+    .modal-body {
+        padding: 3.125px 6.25px;
+        text-align: justify;
+        font-size: 14.0625px;
+    }
+    
+    .modal-footer{
+        padding: 3.125px;
+    }
+    
+    .closeBtn {
+        font-size: 9.375px;
+    }
+    
+    /* about page styles */
+    
+    .aboutContainer{
+        font-size: 1119.375px;
+    }
+    
+    .aboutDiv, .divH2 {
+        margin-left: 3.125%;
+        margin-right: 3.125%;
+    }
+}    
